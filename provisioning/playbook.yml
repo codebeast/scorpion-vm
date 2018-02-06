@@ -1,0 +1,6 @@
+---
+- hosts: development
+  gather_facts: yes
+
+  roles:
+    - docker
