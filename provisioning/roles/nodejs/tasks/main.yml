@@ -1,0 +1,10 @@
+---
+- name: Add Node Repo
+  shell: "curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -"
+  args:
+    warn: no
+  when: add_repository_key|failed
+
+
+- name: Install nodejs
+  apt: name=nodejs state=installed
